@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Be+Vietnam+Pro:wght@300&family=Borel&family=Montserrat:wght@200;300;400&family=Nunito:wght@200;500&family=Pacifico&family=Poppins:ital,wght@0,200;0,400;0,700;1,700&family=Rubik:wght@500&display=swap');
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barriecito', cursive;
+}
+
+.wrapper{
+    height: 100vh;
+    background: linear-gradient(45deg, rgba(255,0,200,1) 0%, rgba(255,115,0,1) 100%);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: black; */
+}
+
+.wrapper div{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    opacity: 0.75;
+    line-height: 1.2;
+}
+
+.display-container{
+    display: flex;
+    flex-direction:row;
+    position: relative;
+    background-color: rgba(219, 43, 43,0.3);
+    border-radius: 1rem;
+    width: 400px;
+    margin-top: 1rem;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 0.35rem solid rgb(223, 50, 50);
+}
+
+.display-container input{
+    background: transparent;
+    border-style: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.display-container input::placeholder{
+    color: black;
+    font-size: 1.3rem;
+    line-height: 30px;
+    top:25%;
+    position: absolute;
+    
+}
+.display-container button{
+    background: none;
+    top:25%;
+    border-style: none;
+    margin-right: 2rem;
+    cursor: pointer;
+    border-style: none
+}
+
+.input-container{
+     width:400px;
+     border-radius: 1rem;
+     background-color:  rgba(219, 43, 43,0.2);
+     margin-top: 1rem;
+     border-bottom: 0.35rem solid  rgb(223, 50, 50);
+
+}
+
+.length-container{
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    color: white;
+    font-size: 20px;
+}
+
+.length-container p:nth-child(2){
+    color: black;
+    font-style: bold;
+}
+
+.strength-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    color: white;
+    font-size: 20px;
+    
+}
+
+.circle{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    z-index: 4;
+
+}
+
+.generateBtn{
+    text-transform: uppercase;
+    background-color: aqua;
+    border-style: none;
+    margin-bottom: 20px;
+    font-size: 20px;
+    width: 80%;
+    border-radius: 1rem;
+    padding: 5px 0;
+    border-bottom:0.35rem solid rgb(8, 24, 66); 
+    cursor: pointer;
+} 
+
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+    margin-left: 20px;
+}
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 1px solid aqua;
+    position: relative;
+    border-radius: 0.35rem;
+
+}
+
+.check input:checked{
+    background-color: aqua;
+}
+.check input:checked::before{
+    content: '✔';
+    position: absolute;
+    color: rgb(11, 4, 54);
+    font-size: 1.05rem;
+    top:-4px;
+    left: 3px;
+}
+.check label{
+    color:white;
+    font-size: 1.25rem;
+}
+
+.slider{
+    appearance: none;
+    width:80%;
+    height: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: rgb(255, 0, 68);
+    background-image: linear-gradient(rgb(230, 29, 29) , rgb(143, 9, 14));
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    z-index: -1;
+}
+
+.slider::-webkit-slider-thumb{
+    position: relative;
+  appearance: none;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color:yellow;
+  box-shadow:0px 0px 20px 0px yellow ;
+  cursor: pointer;
+  z-index: 20;
+}
+.slider:focus{
+    outline: 3px solid yellow;
+}
+
+.slider::-webkit-slider-thumb:hover{
+    background-color: rgb(44, 5, 5);
+    box-shadow:0px 0px 20px 0px yellow ;
+    outline: 2px solid yellow;
+
+}
+.tooltip{
+    position: absolute;
+    background-color: rgb(226, 23, 23);
+    padding: 5px;
+    opacity: 0;
+    border-radius: 1rem;
+    padding: 5px 10px;
+    top:-15%
+}
+.tooltip.active{
+    opacity: 1;
+    transform: scale(1);
+}
